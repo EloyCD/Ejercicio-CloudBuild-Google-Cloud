@@ -1,0 +1,11 @@
+steps:
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    args:
+    - functions
+    - deploy
+    - mifunciongcp
+    - --region=europe-west1
+    - --source=/mi_app
+    - --trigger-bucket
+    - --runtime=python39
+    - --allow-unauthenticated
