@@ -7,5 +7,5 @@ steps:
     - --region=europe-west1
     - --source=/mi_app
     - --trigger-bucket
-    - --runtime
+    - --runtime=python39
     - --allow-unauthenticated
