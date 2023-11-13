@@ -1,10 +1,9 @@
-import base64
-
 def mifunciongcp(event, context):
-    """Triggered from a message on a Cloud Pub/Sub topic.
+    """Triggered by a change to a Cloud Storage bucket.
     Args:
          event (dict): Event payload.
          context (google.cloud.functions.Context): Metadata for the event.
     """
-    pubsub_message = base64.b64decode(event['data']).decode('utf-8')
+    file = event
+    print(f"Processing file: {file['name']}.")
     print("Hola mundo, estamos de Lunes, que duro es, pronto es año nuevo")
