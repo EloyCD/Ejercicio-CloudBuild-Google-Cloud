@@ -7,4 +7,4 @@ def mifunciongcp(event, context):
          context (google.cloud.functions.Context): Metadata for the event.
     """
     pubsub_message = base64.b64decode(event['data']).decode('utf-8')
-    print("Hola mundo, estamos de Lunes, que duro es!!!")
+    print("Hola mundo, estamos de Lunes, que duro es, pronto es año nuevo")
