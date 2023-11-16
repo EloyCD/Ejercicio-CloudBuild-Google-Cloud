@@ -3,7 +3,7 @@ steps:
     args:
     - functions
     - deploy
-    - mifunciongcp
+    - read_json_from_gcs
     - --region=europe-west1
     - --source=./mi_app
     - --trigger-bucket=mibucketdeporlatarde
