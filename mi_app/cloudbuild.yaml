@@ -6,6 +6,6 @@ steps:
     - mifunciongcp
     - --region=europe-west1
     - --source=./mi_app
-    - --trigger-bucket=mibucket1311
+    - --trigger-bucket=mibucketdeporlatarde
     - --runtime=python39
     - --allow-unauthenticated
