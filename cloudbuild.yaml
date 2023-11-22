@@ -14,6 +14,7 @@ steps:
   # Paso 2: Construcción de la imagen del contenedor
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'europe-west1-docker.pkg.dev/singular-skill-404011/misimageneseloy/miimagenfinal', '.']
+      - ./mi_app
 
   # Paso 3: Subida de la imagen a Artifact Registry
   - name: 'gcr.io/cloud-builders/docker'
