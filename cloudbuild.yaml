@@ -7,27 +7,30 @@ steps:
       - read_json_from_gcs
       - --region=europe-west1
       - --source=./mi_app
-      - --trigger-bucket=mibucketdeporlatarde
+      - --trigger-bucket=gs://mibucketdeporlatarde
       - --runtime=python39
       - --allow-unauthenticated
 
   # Paso 2: Construcción de la imagen del contenedor
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/singular-skill-404011/miimagenfinal', '.']
+    args: ['build', '-t', 'europe-west1-docker.pkg.dev/singular-skill-404011/misimageneseloy/miimagenfinal', '.']
 
   # Paso 3: Subida de la imagen a Artifact Registry
   - name: 'gcr.io/cloud-builders/docker'
     args:
-      - 'push'
-      - 'us-central1-docker.pkg.dev/singular-skill-404011/miregistrofinal/miimagenfinal'
+      - push
+      - europe-west1-docker.pkg.dev/singular-skill-404011/misimageneseloy/miimagenfinal
 
   # Paso 4: Despliegue en Cloud Run
   - name: 'gcr.io/cloud-builders/gcloud'
     args:
-      - 'run'
-      - 'deploy'
-      - 'miserviciofinal'
-      - '--image=us-central1-docker.pkg.dev/singular-skill-404011/miregistrofinal/miimagenfinal'
-      - '--platform=managed'
-      - '--region=europe-west1'
-      - '--allow-unauthenticated'
+      - run
+      - deploy
+      - miserviciofinal
+      - --image=europe-west1-docker.pkg.dev/singular-skill-404011/misimageneseloy/miimagenfinal
+      - --platform=managed
+      - --region=europe-west1
+      - --allow-unauthenticated
+      - --port=8080
+images:
+- europe-west1-docker.pkg.dev/singular-skill-404011/misimageneseloy/miimagenfinal
