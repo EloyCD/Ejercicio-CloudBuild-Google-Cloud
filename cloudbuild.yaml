@@ -6,7 +6,7 @@ steps:
       - deploy
       - read_json_from_gcs
       - --region=europe-west1
-      - --source=./mi_app
+      - --source=./mi_funcion
       - --trigger-bucket=gs://mibucketdeporlatarde
       - --runtime=python39
       - --allow-unauthenticated
