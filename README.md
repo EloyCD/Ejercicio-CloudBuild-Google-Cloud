@@ -24,7 +24,8 @@
                 Configuración de Activadores:
 
               - Se establecen activadores que, al realizar un commit en las carpetas asociadas, activan automáticamente los despliegues y ponen en marcha la aplicación web.
-                En resumen, estamos construyendo una aplicación web que recopila datos, los almacena en la nube, los transfiere a una base de datos específica y luego utiliza servicios de Google Cloud para desplegar automáticamente la aplicación utilizando Cloud Function y Cloud Run cuando hay cambios en las carpetas correspondientes.
+                En resumen, estamos construyendo una aplicación web que recopila datos, los almacena en la nube, los transfiere a una base de datos específica y luego utiliza servicios de Google Cloud para 
+                desplegar automáticamente la aplicación utilizando Cloud Function y Cloud Run cuando hay cambios en las carpetas correspondientes.
 
 
 
